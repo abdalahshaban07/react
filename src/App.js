@@ -1,49 +1,70 @@
 import React, { Component } from 'react';
 // import logo from './logo.svg';
 import './App.css';
-import Greet from './components/Greet';
-import Welcome from './components/welcome';
-import Hello from './components/Hello';
-import Message from './components/Message';
-import Counter from './components/Counter';
-import FunctionClick from './components/FunctionClick';
-import ClassClick from './components/ClassClick';
-import EventBind from './components/EventBind';
-import ParentComponent from './components/ParentComponent';
-import UserGreeting from './components/UserGreeting';
-import NameList from './components/NameList';
-import Stylesheet from './components/Stylesheet';
-import Inline from './components/Inline';
+// import Greet from './components/Greet';
+// import Welcome from './components/welcome';
+// import Hello from './components/Hello';
+// import Message from './components/Message';
+// import Counter from './components/Counter';
+// import FunctionClick from './components/FunctionClick';
+// import ClassClick from './components/ClassClick';
+// import EventBind from './components/EventBind';
+// import ParentComponent from './components/ParentComponent';
+// import UserGreeting from './components/UserGreeting';
+// import NameList from './components/NameList';
+// import Stylesheet from './components/Stylesheet';
+// import Inline from './components/Inline';
 import './css/appStyles.css';
-import styles from './css/appStyles.module.css';
-import Form from './components/Form';
-import LifeCycleA from './components/LifeCycleA';
+// import RefsDemo from './components/RefsDemo';
+// import FocusInput from './components/FocusInput';
+// import FRParentInput from './components/FRParentInput';
+// import PortalDemo from './components/PortalDemo';
+import Hero from './components/Hero';
+import ErrorBoundary from './components/ErrorBoundary';
+// import styles from './css/appStyles.module.css';
+// import Form from './components/Form';
+// import LifeCycleA from './components/LifeCycleA';
+// import FragmentDemo from './components/FragmentDemo';
+// import Table from './components/Table';
+// import ParentComp from './components/ParentComp';
 // import './css/appStyles.module.css';// cant use class inside
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <LifeCycleA />
-        {/*<Form />*/}
-        {/*<h1 className="error">Error</h1>*/}
-        {/*<h1 className={styles.sucess}>Sucesss</h1>*/}
-        {/*<h1 className="sucess">Sucesss</h1> // if styles.module can not use class without import styles from './css/appStyles.module.css';*/}
-        {/*<Inline />*/}
-        {/*<Stylesheet primary={true} />*/}
-        {/*<NameList />*/}
-        {/*<UserGreeting />*/}
-        {/*<ParentComponent />*/}
-        {/*<EventBind />*/}
-        {/*<FunctionClick />*/}
-        {/*<ClassClick />*/}
-        {/*<Greet name="Diana" heroName="Wonder Woman">
+	render() {
+		return (
+			<div className="App">
+				<ErrorBoundary>
+					<Hero heroName="Batman" />
+					<Hero heroName="Superman" />
+					<Hero heroName="Joker" />
+				</ErrorBoundary>
+				{/*<PortalDemo />*/}
+				{/*<FRParentInput />*/}
+				{/*<FocusInput />*/}
+				{/*<RefsDemo />*/}
+				{/*<ParentComp />*/}
+				{/*<Table />*/}
+				{/*<FragmentDemo />*/}
+				{/*<LifeCycleA />*/}
+				{/*<Form />*/}
+				{/*<h1 className="error">Error</h1>*/}
+				{/*<h1 className={styles.sucess}>Sucesss</h1>*/}
+				{/*<h1 className="sucess">Sucesss</h1> // if styles.module can not use class without import styles from './css/appStyles.module.css';*/}
+				{/*<Inline />*/}
+				{/*<Stylesheet primary={true} />*/}
+				{/*<NameList />*/}
+				{/*<UserGreeting />*/}
+				{/*<ParentComponent />*/}
+				{/*<EventBind />*/}
+				{/*<FunctionClick />*/}
+				{/*<ClassClick />*/}
+				{/*<Greet name="Diana" heroName="Wonder Woman">
           <p>this is children in destructuring</p>
     </Greet>*/}
 
-        {/* <Welcome name="Bruce" heroName="Batman" />*/}
+				{/* <Welcome name="Bruce" heroName="Batman" />*/}
 
-        {/*<Counter></Counter>}
+				{/*<Counter></Counter>}
         {/*<Message></Message>}
         {/*<Greet name="Bruce" heroName='Batman' >
           <p>this is children props</p>
@@ -56,9 +77,9 @@ class App extends Component {
         <Welcome name="Clark" heroName='Superman' />
         <Welcome name="Clark" heroName='Superman' />
         {/* <Hello />*/}
-      </div>
-    );
-  }
+			</div>
+		);
+	}
 }
 
 export default App;
