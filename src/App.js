@@ -15,12 +15,18 @@ import './App.css';
 // import Stylesheet from './components/Stylesheet';
 // import Inline from './components/Inline';
 import './css/appStyles.css';
+// import ClickCounter from './components/ClickCounter';
+// import HoverCounter from './components/HoverCounter';
+import ClickCounterTwo from './components/ClickCounterTwo';
+import HoverCounterTwo from './components/HoverCounterTwo';
+import User from './components/User';
+import CounterTwo from './components/CounterTwo';
 // import RefsDemo from './components/RefsDemo';
 // import FocusInput from './components/FocusInput';
 // import FRParentInput from './components/FRParentInput';
 // import PortalDemo from './components/PortalDemo';
-import Hero from './components/Hero';
-import ErrorBoundary from './components/ErrorBoundary';
+// import Hero from './components/Hero';
+// import ErrorBoundary from './components/ErrorBoundary';
 // import styles from './css/appStyles.module.css';
 // import Form from './components/Form';
 // import LifeCycleA from './components/LifeCycleA';
@@ -33,11 +39,27 @@ class App extends Component {
 	render() {
 		return (
 			<div className="App">
-				<ErrorBoundary>
-					<Hero heroName="Batman" />
-					<Hero heroName="Superman" />
-					<Hero heroName="Joker" />
-				</ErrorBoundary>
+				<CounterTwo
+					render={(count, incrementCount) => (
+						<ClickCounterTwo count={count} incrementCount={incrementCount} />
+					)}
+				/>
+
+				<CounterTwo
+					render={(count, incrementCount) => (
+						<HoverCounterTwo count={count} incrementCount={incrementCount} />
+					)}
+				/>
+				{/*<ClickCounterTwo />
+				<HoverCounterTwo />
+				<User render={(isLoggedIn) => (isLoggedIn ? 'abdalah' : 'Guest')} />*/}
+				{/*<ClickCounter name="abdalah" />*/}
+				{/*<HoverCounter />*/}
+				{/*<ErrorBoundary>
+				<Hero heroName="Batman" />
+				<Hero heroName="Superman" />
+				<Hero heroName="Joker" />
+			</ErrorBoundary>*/}
 				{/*<PortalDemo />*/}
 				{/*<FRParentInput />*/}
 				{/*<FocusInput />*/}
@@ -61,9 +83,7 @@ class App extends Component {
 				{/*<Greet name="Diana" heroName="Wonder Woman">
           <p>this is children in destructuring</p>
     </Greet>*/}
-
 				{/* <Welcome name="Bruce" heroName="Batman" />*/}
-
 				{/*<Counter></Counter>}
         {/*<Message></Message>}
         {/*<Greet name="Bruce" heroName='Batman' >
